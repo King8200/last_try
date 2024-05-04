@@ -29,12 +29,12 @@ DB_URI = os.environ.get("DATABASE_URL", "mongodb+srv://namans17549:ZnW0GmHnb8CSo
 DB_NAME = os.environ.get("DATABASE_NAME", "Cluster0")
 
 #force sub channel id, if you want enable force sub
-FORCE_SUB_CHANNEL = int(os.environ.get("FORCE_SUB_CHANNEL", "0"))
+FORCE_SUB_CHANNEL = int(os.environ.get("FORCE_SUB_CHANNEL", "-1002004014037"))
 
 TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "4"))
 
 #start message
-START_MSG = os.environ.get("START_MESSAGE", "Hello {first}\n\nI can store private files in Specified Channel and other users can access it from special link.")
+START_MSG = os.environ.get("START_MESSAGE", "Hello {first}\n\nI am your Anime Bot On which you can watch or download anime.")
 try:
     ADMINS=[]
     for x in (os.environ.get("ADMINS", "").split()):
