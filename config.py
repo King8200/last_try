@@ -1,10 +1,13 @@
+#(©)CodeXBotz
+
+
+
+
 import os
 import logging
 from logging.handlers import RotatingFileHandler
-import schedule
-import time
 
-#(©)CodeXBotz
+
 
 #Bot token @Botfather
 TG_BOT_TOKEN = os.environ.get("TG_BOT_TOKEN", "6792785641:AAEH8AvRHukeSW3FnOUQO9HNosH6Ic0SFUk")
@@ -80,34 +83,3 @@ logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
 def LOGGER(name: str) -> logging.Logger:
     return logging.getLogger(name)
-
-def delete_message(message_id, chat_id):
-    # Code to delete the message
-    # For example, using pyrogram:
-    app.delete_messages(chat_id, message_id)
-
-def send_message(message, chat_id):
-    # Code to send the message
-    # For example, using pyrogram:
-    message_id = app.send_message(chat_id, message)
-
-    # Schedule the message to be deleted after 1 minute
-    schedule.every(1).minutes.do(delete_message, message_id, chat_id)
-
-while True:
-    schedule.run_pending()
-    time.sleep(1)
-
-if __name__ == "__main__":
-    # Initialize the Pyrogram client
-    app = Client(
-        "FileSharingBot",
-        bot_token=TG_BOT_TOKEN,
-        api_hash=API_HASH,
-        api_id=APP_ID,
-        workers=TG_BOT_WORKERS,
-        plugins=dict(root="handlers")
-    )
-
-    # Start the bot
-    app.run()
