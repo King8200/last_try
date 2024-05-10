@@ -10,7 +10,7 @@ from logging.handlers import RotatingFileHandler
 
 
 #Bot token @Botfather
-TG_BOT_TOKEN = os.environ.get("TG_BOT_TOKEN", "6792785641:AAEH8AvRHukeSW3FnOUQO9HNosH6Ic0SFUk")
+TG_BOT_TOKEN = os.environ.get("TG_BOT_TOKEN", "7111613366:AAF_Zmja0EYQRUHZOkDU9lFWY8WUVqpekB0")
 
 #Your API ID from my.telegram.org
 APP_ID = int(os.environ.get("APP_ID", "20609085"))
@@ -29,12 +29,12 @@ DB_URI = os.environ.get("DATABASE_URL", "mongodb+srv://namans17549:ZnW0GmHnb8CSo
 DB_NAME = os.environ.get("DATABASE_NAME", "Cluster0")
 
 #force sub channel id, if you want enable force sub
-FORCE_SUB_CHANNEL = int(os.environ.get("FORCE_SUB_CHANNEL", "-1002004014037"))
+FORCE_SUB_CHANNEL = int(os.environ.get("FORCE_SUB_CHANNEL", "-1001569807425"))
 
 TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "4"))
 
 #start message
-START_MSG = os.environ.get("START_MESSAGE", "Hello {first}\n\nI am your personal 😄 bot where you can Watch or Download Anime.")
+START_MSG = os.environ.get("START_MESSAGE", "Hello {first}\n\nI am your personal 😄 bot where you can Save your file and get shareable link.")
 try:
     ADMINS=[]
     for x in (os.environ.get("ADMINS", "").split()):
